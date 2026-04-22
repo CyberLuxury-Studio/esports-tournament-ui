@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        neon: {
+          green: "#00FF00",
+        },
+        electric: {
+          crimson: "#FF003C",
+        }
       },
       fontFamily: {
         'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
