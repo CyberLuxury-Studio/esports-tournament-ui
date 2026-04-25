@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const players = [
   { id: 'p1', name: 'N0VA', role: 'FRAGGER', kd: 2.4, wr: 68, img: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2800' },
@@ -68,7 +69,7 @@ export default function PlayerRoster() {
             <div className="absolute inset-0 skew-x-6 scale-110">
               <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-colors z-10 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-20" />
-              <img src={player.img} alt={player.name} className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+              <Image src={player.img} alt={player.name} fill className="object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" />
             </div>
 
             {/* Content */}

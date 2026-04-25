@@ -1,10 +1,12 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import LiveBracket from '@/components/LiveBracket';
-import PlayerRoster from '@/components/PlayerRoster';
-import StreamFeed from '@/components/StreamFeed';
 import Footer from '@/components/Footer';
+import dynamic from 'next/dynamic';
+
+const Hero = dynamic(() => import('@/components/Hero'), { ssr: false });
+const LiveBracket = dynamic(() => import('@/components/LiveBracket'));
+const PlayerRoster = dynamic(() => import('@/components/PlayerRoster'));
+const StreamFeed = dynamic(() => import('@/components/StreamFeed'));
 
 export default function Home() {
   return (
